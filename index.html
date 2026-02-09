@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For Shivu 🤍</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #fff1f7, #e6f0ff);
+  height: 100vh;
+  overflow: hidden;
+}
+
+.page {
+  display: none;
+  height: 100vh;
+  width: 100%;
+  padding: 30px;
+  text-align: center;
+  position: relative;
+}
+
+.page.active {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  color: #444;
+  line-height: 1.7;
+}
+
+button {
+  margin-top: 30px;
+  padding: 12px 28px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 25px;
+  background: #ff7aa2;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.08);
+  background: #ff5f8f;
+}
+
+/* flowers */
+.flower {
+  position: absolute;
+  font-size: 2rem;
+  animation: float 6s infinite ease-in-out;
+  opacity: 0.7;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-25px); }
+  100% { transform: translateY(0); }
+}
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+<div class="page active">
+  <h1>Hey Shivu 🌸</h1>
+  <p>
+    Before you smile, before you tease me for doing something dramatic again,
+    and before you say “what is this now?”…  
+    just pause for a second.  
+    This little space is only for you.
+  </p>
+  <div class="flower" style="top:20%; left:10%">🌷</div>
+  <div class="flower" style="top:60%; right:12%">🌸</div>
+  <button onclick="nextPage()">Start 💫</button>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page">
+  <h1>So listen na 😌</h1>
+  <p>
+    It still feels unreal that I’m finally going to meet you after so many months.
+    Time passed, days passed, birthdays passed…  
+    but our bond?  
+    It stayed exactly the same — strong, warm, and a little crazy (mostly because of you).
+  </p>
+  <div class="flower" style="top:25%; right:15%">🌹</div>
+  <div class="flower" style="bottom:20%; left:15%">🌼</div>
+  <button onclick="nextPage()">Next ➜</button>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page">
+  <h1>Happy Belated Birthday 🎂</h1>
+  <p>
+    I know I’ve said it before, but birthdays are not just dates —  
+    they are reminders that the world became better the day you entered it.
+    You deserve all the love, peace, laughter, and success that life can offer.
+    And yes… cake bhi thoda zyada deserve karti ho 😄
+  </p>
+  <div class="flower" style="top:18%; left:20%">🌺</div>
+  <div class="flower" style="bottom:18%; right:20%">💐</div>
+  <button onclick="nextPage()">Keep going 🎈</button>
+</div>
+
+<!-- PAGE 4 -->
+<div class="page">
+  <h1>Now thoda teasing 😏</h1>
+  <p>
+    Honestly speaking…  
+    you’re sweet, caring, supportive, emotional, strong —
+    and also a full-time drama queen.  
+    Sometimes I wonder how someone can be so annoying  
+    and still be impossible to replace.
+  </p>
+  <div class="flower" style="top:30%; left:10%">🌸</div>
+  <div class="flower" style="bottom:30%; right:10%">🌷</div>
+  <button onclick="nextPage()">😄 ➜</button>
+</div>
+
+<!-- PAGE 5 -->
+<div class="page">
+  <h1>But jokes apart 🤍</h1>
+  <p>
+    You are family to me.  
+    The kind of person who feels like home, not distance.
+    Through ups, downs, silence, laughter —  
+    you’ve always been there in ways you probably don’t even realize.
+  </p>
+  <div class="flower" style="top:22%; right:18%">🌹</div>
+  <div class="flower" style="bottom:22%; left:18%">🌼</div>
+  <button onclick="nextPage()">Almost there ✨</button>
+</div>
+
+<!-- PAGE 6 -->
+<div class="page">
+  <h1>Meeting you again 💞</h1>
+  <p>
+    After months, when I see you again,
+    I know it will feel like no time has passed at all.
+    Same laughter, same teasing, same bond —
+    just stronger, warmer, and even more special.
+  </p>
+  <div class="flower" style="top:15%; left:15%">💐</div>
+  <div class="flower" style="bottom:15%; right:15%">🌸</div>
+  <button onclick="nextPage()">Last ➜</button>
+</div>
+
+<!-- PAGE 7 -->
+<div class="page">
+  <h1>Always remember 🌈</h1>
+  <p>
+    You are loved.  
+    You are important.  
+    And no matter what changes around us,
+    I’ll always be here — to support you, tease you,
+    and stand by you like family does.
+  </p>
+  <p style="margin-top:20px; font-style: italic;">
+    — From someone who’s very grateful to have you 🤍
+  </p>
+  <div class="flower" style="top:20%; left:10%">🌷</div>
+  <div class="flower" style="top:20%; right:10%">🌸</div>
+</div>
+
+<script>
+let current = 0;
+const pages = document.querySelectorAll('.page');
+
+function nextPage() {
+  pages[current].classList.remove('active');
+  current++;
+  pages[current].classList.add('active');
+}
+</script>
+
+</body>
+</html>
